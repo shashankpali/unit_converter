@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unit Converter</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h2>Unit Converter</h2>
-      <div class="card">
-        <div class="grid">
-          <div class="input-wrapper">
-            <label for="mm">Millimeter (mm)</label>
-            <input type="text" id="mm" oninput="fromUnit('mm', this.value)" />
-            <button class="copy-btn" onclick="copyValue('mm')">❐</button>
-          </div>
-          <div class="input-wrapper">
-            <label for="cm">Centimeter (cm)</label>
-            <input type="text" id="cm" oninput="fromUnit('cm', this.value)" />
-            <button class="copy-btn" onclick="copyValue('cm')">❐</button>
-          </div>
-          <div class="input-wrapper">
-            <label for="inch">Inches (in)</label>
-            <input type="text" id="inch" oninput="fromUnit('inch', this.value)" />
-            <button class="copy-btn" onclick="copyValue('inch')">❐</button>
-          </div>
-          <div class="input-wrapper">
-            <label for="feet">Feet (ft)</label>
-            <input type="text" id="feet" oninput="fromUnit('feet', this.value)" />
-            <button class="copy-btn" onclick="copyValue('feet')">❐</button>
-          </div>
-          <div class="input-wrapper full-width">
-            <label for="pixel">Pixel (px)</label>
-            <input type="text" id="pixel" oninput="fromUnit('pixel', this.value)" />
-            <button class="copy-btn" onclick="copyValue('pixel')">❐</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unit Converter</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0af" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Unit Converter</h2>
+    <div class="card">
+      <div class="grid">
+        <div class="input-wrapper">
+          <label for="mm">Millimeter (mm)</label>
+          <input type="text" id="mm" oninput="fromMM(this.value)" />
+          <button class="copy-btn" onclick="copyValue('mm')">❐</button>
         </div>
-
-        <div class="meta" id="pxLabel">current 1 inch = 45 pixel</div>
-
-        <div class="footer">
-          <span class="left" onclick="clearAll()">Clear All</span>
-          <span class="right" onclick="editPixelFactor()">Set pixel with inch</span>
+        <div class="input-wrapper">
+          <label for="cm">Centimeter (cm)</label>
+          <input type="text" id="cm" oninput="fromCM(this.value)" />
+          <button class="copy-btn" onclick="copyValue('cm')">❐</button>
+        </div>
+        <div class="input-wrapper">
+          <label for="inch">Inches (in)</label>
+          <input type="text" id="inch" oninput="fromInch(this.value)" />
+          <button class="copy-btn" onclick="copyValue('inch')">❐</button>
+        </div>
+        <div class="input-wrapper">
+          <label for="feet">Feet (ft)</label>
+          <input type="text" id="feet" oninput="fromFeet(this.value)" />
+          <button class="copy-btn" onclick="copyValue('feet')">❐</button>
+        </div>
+        <div class="input-wrapper full-width">
+          <label for="pixel">Pixel (px)</label>
+          <input type="text" id="pixel" oninput="fromPixel(this.value)" />
+          <button class="copy-btn" onclick="copyValue('pixel')">❐</button>
         </div>
       </div>
+      <div class="meta" id="pxLabel">current 1 inch = 45 pixel</div>
+      <div class="footer">
+        <span class="left" onclick="clearAll()">Clear All</span>
+        <span class="right" onclick="editPixelFactor()">Set pixel with inch</span>
+      </div>
     </div>
-
-    <div id="toast"></div>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
 </html>
