@@ -10,11 +10,7 @@ A modern unit converter for mm, cm, inches, feet, and pixels. Built with HTML, C
 - 📱 Installable PWA
 - ⚡ Works offline with service worker
 
-## Setup
-
-1. Upload this to a GitHub repository.
-2. Enable GitHub Pages under Settings → Pages.
-3. Done! Live at `https://shashankpali.github.io/unit_converter/`
+**🚀 [Unit Converter is Live!](https://shashankpali.github.io/unit_converter/)**
 
 ---
 
